@@ -10,6 +10,7 @@ const targetBox = document.querySelector('#boxes');
 createButton.addEventListener('click', () => {
   let addedDivs = '';
   if (numberOfDiv.value >= 1 && numberOfDiv.value <= 100) {
+    targetBox.innerHTML = '';
     let count = 1;
     let width = 30;
     let height = 30;
