@@ -12,3 +12,22 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const imagesHtmlCode = () => {
+  let resultcode = '';
+  for (const image of images) {
+    resultcode += `<li><img src="${image.url}" alt="${image.alt}"></li>`;
+  }
+  return resultcode;
+};
+document
+  .querySelector('.gallery')
+  .insertAdjacentHTML('afterbegin', imagesHtmlCode());
+// let imagesHtmlCode = '';
+// function htmlCode() {
+//   for (const image of images) {
+//     console.log(image.url);
+//     imagesHtmlCode += `<li><img src="${image.url}" alt="${image.alt}"></li>`;
+//   }
+// }
+// htmlCode();
+// console.log(imagesHtmlCode);
